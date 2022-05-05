@@ -150,6 +150,7 @@ keyboardAction:
 	beq $t5, 0x62, changeToBlue #if key press = 'b' branch to changeToBlue
 	beq $t5 0x78, deleteColor #if key press = 'x' branch to deleteColor
 	beq $t5 0x30, exitProgram #if key press = '0' branch to exit program
+	b exitAction #if the value not in on listed above exit function
 	
 	#exit program
 	exitProgram:
